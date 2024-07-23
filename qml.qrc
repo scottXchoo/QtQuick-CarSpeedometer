@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <!-- 다른 QML 파일들 -->
+        <!-- <file>resources/images/example.png</file> -->
+        <!-- 다른 리소스 파일들 -->
+    </qresource>
+</RCC>
