@@ -1,0 +1,11 @@
+# ninja log v6
+6	118	1721722201196776522	/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/QML_Project_Template_autogen/mocs_compilation.cpp	8904b1e6041ac473
+6	118	1721722201196776522	QML_Project_Template_autogen/mocs_compilation.cpp	8904b1e6041ac473
+6	118	1721722201196776522	QML_Project_Template_autogen/timestamp	8904b1e6041ac473
+1473	1636	1721722202574014540	QML_Project_Template	9519e335e08994c3
+6	118	1721722201196776522	/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/QML_Project_Template_autogen/timestamp	8904b1e6041ac473
+118	186	1721722201285621618	QML_Project_Template_autogen/EWIEGA46WW/qrc_qml.cpp	d9871f4c552dd05d
+118	186	1721722201285621618	/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/QML_Project_Template_autogen/EWIEGA46WW/qrc_qml.cpp	d9871f4c552dd05d
+186	1470	1721722201287576393	CMakeFiles/QML_Project_Template.dir/src/main.cpp.o	552c8a15178ba1ca
+186	232	1721722201287756599	CMakeFiles/QML_Project_Template.dir/QML_Project_Template_autogen/EWIEGA46WW/qrc_qml.cpp.o	32f769bb4c2ae0e0
+186	215	1721722201287270395	CMakeFiles/QML_Project_Template.dir/QML_Project_Template_autogen/mocs_compilation.cpp.o	58a6557337874b48

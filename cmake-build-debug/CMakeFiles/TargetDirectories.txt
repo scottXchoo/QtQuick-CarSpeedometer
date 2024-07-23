@@ -1,0 +1,5 @@
+/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/CMakeFiles/QML_Project_Template.dir
+/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/CMakeFiles/QML_Project_Template_autogen_timestamp_deps.dir
+/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/CMakeFiles/QML_Project_Template_autogen.dir
