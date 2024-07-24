@@ -1,21 +1,17 @@
-#include <QDebug>
-
 #include "../include/Car.h"
-#include "../include/Speedometer.h"
 #include "../include/Engine.h"
 
+#include <QDebug>
+
 Car::Car() : current_speed_(0) {
-  speedometer = new Speedometer(this);
   engine = new Engine(this);
 
   connect(this, &Car::accSignal, engine, &Engine::accSlot);
-  connect(this, &Car::speedChangeSignal, speedometer, &Speedometer::updateSpeedSlot);
 
   qDebug() << "Car: Created";
 }
 
 Car::~Car() {
-  delete speedometer;
   delete engine;
 }
 

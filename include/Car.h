@@ -3,7 +3,6 @@
 
 #include <QObject>
 
-class Speedometer;
 class Engine;
 
 class Car : public QObject {
@@ -26,7 +25,6 @@ class Car : public QObject {
 
  private:
   int current_speed_ = 0;
-  Speedometer *speedometer;
   Engine *engine;
 };
 

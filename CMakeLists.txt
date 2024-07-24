@@ -20,7 +20,6 @@ add_executable(Tesla_Speedometer
 	src/Car.cpp
 	include/Car.h
 	src/Speedometer.cpp
-	include/Speedometer.h
 	src/Engine.cpp
 	include/Engine.h
 	src/Indicator.cpp
