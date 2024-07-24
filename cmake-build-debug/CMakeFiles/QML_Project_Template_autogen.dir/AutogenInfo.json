@@ -802,7 +802,7 @@
 	"MOC_PREDEFS_CMD" : 
 	[
 		"/Library/Developer/CommandLineTools/usr/bin/c++",
-		"-std=gnu++17",
+		"-std=gnu++2b",
 		"-dM",
 		"-E",
 		"-c",

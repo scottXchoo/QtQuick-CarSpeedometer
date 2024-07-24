@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 project(QML_Project_Template)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 23)
 
 # Qt 패키지 찾기
 set(CMAKE_PREFIX_PATH "/Users/chooble/Documents/Qt/6.7.2/macos/lib/cmake") # Qt 설치 경로 설정
