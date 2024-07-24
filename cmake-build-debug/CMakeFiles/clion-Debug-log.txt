@@ -1,4 +1,13 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template -B /Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug
--- Configuring done (1.7s)
--- Generating done (0.0s)
--- Build files have been written to: /Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /Users/chooble/Documents/Tesla-Speedometer -B /Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug
+CMake Deprecation Warning:
+  Support for "Extra Generators" like
+
+    CodeBlocks
+
+  is deprecated and will be removed from a future version of CMake.  IDEs may
+  use the cmake-file-api(7) to view CMake-generated project build trees.
+
+
+-- Configuring done (0.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug

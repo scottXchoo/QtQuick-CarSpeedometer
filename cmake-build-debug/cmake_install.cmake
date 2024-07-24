@@ -1,4 +1,4 @@
-# Install script for directory: /Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template
+# Install script for directory: /Users/chooble/Documents/Tesla-Speedometer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,22 +1,25 @@
 {
-	"BUILD_DIR" : "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/QML_Project_Template_autogen",
-	"CMAKE_BINARY_DIR" : "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template",
+	"BUILD_DIR" : "/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug/QML_Project_Template_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/chooble/Documents/Tesla-Speedometer",
 	"CMAKE_EXECUTABLE" : "/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/CMakeLists.txt",
-		"/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake",
+		"/Users/chooble/Documents/Tesla-Speedometer/CMakeLists.txt",
+		"/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake",
-		"/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake",
-		"/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake",
+		"/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake",
+		"/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake",
+		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeFindCodeBlocks.cmake",
+		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake",
+		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/ProcessorCount.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-C.cmake",
@@ -735,15 +738,15 @@
 		"/Users/chooble/Documents/Qt/6.7.2/macos/lib/cmake/Qt6Quick/Qt6QuickAdditionalTargetInfo.cmake",
 		"/Users/chooble/Documents/Qt/6.7.2/macos/lib/cmake/Qt6Quick/Qt6QuickVersionlessTargets.cmake",
 		"/Users/chooble/Documents/Qt/6.7.2/macos/lib/cmake/Qt6Quick/Qt6QuickPlugins.cmake",
-		"/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/qml.qrc"
+		"/Users/chooble/Documents/Tesla-Speedometer/qml.qrc"
 	],
-	"CMAKE_SOURCE_DIR" : "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template",
-	"DEP_FILE" : "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/QML_Project_Template_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/Users/chooble/Documents/Tesla-Speedometer",
+	"DEP_FILE" : "/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug/QML_Project_Template_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "QML_Project_Template_autogen/timestamp",
 	"HEADERS" : [],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/QML_Project_Template_autogen/include",
-	"MOC_COMPILATION_FILE" : "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/QML_Project_Template_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug/QML_Project_Template_autogen/include",
+	"MOC_COMPILATION_FILE" : "/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug/QML_Project_Template_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
@@ -783,10 +786,8 @@
 		"/Users/chooble/Documents/Qt/6.7.2/macos/lib/QtQmlModels.framework",
 		"/Users/chooble/Documents/Qt/6.7.2/macos/lib/QtOpenGL.framework/Headers",
 		"/Users/chooble/Documents/Qt/6.7.2/macos/lib/QtOpenGL.framework",
-		"/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1",
-		"/Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include",
-		"/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include",
-		"/Library/Developer/CommandLineTools/usr/include"
+		"/usr/include",
+		"/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include"
 	],
 	"MOC_MACRO_NAMES" : 
 	[
@@ -808,24 +809,20 @@
 		"-c",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/QML_Project_Template_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug/QML_Project_Template_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/CMakeFiles/QML_Project_Template_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug/CMakeFiles/QML_Project_Template_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/Users/chooble/Documents/Qt/6.7.2/macos/./libexec/moc",
 	"QT_UIC_EXECUTABLE" : "",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 7,
-	"SETTINGS_FILE" : "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/CMakeFiles/QML_Project_Template_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug/CMakeFiles/QML_Project_Template_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[
-			"/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/src/main.cpp",
-			"MU",
-			null
-		]
+		[ "/Users/chooble/Documents/Tesla-Speedometer/src/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

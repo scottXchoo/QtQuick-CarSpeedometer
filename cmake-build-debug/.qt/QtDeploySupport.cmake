@@ -34,7 +34,7 @@ endif()
 set(__QT_DEPLOY_SYSTEM_NAME "Darwin")
 set(__QT_DEPLOY_IS_SHARED_LIBS_BUILD "ON")
 set(__QT_DEPLOY_TOOL "/Users/chooble/Documents/Qt/6.7.2/macos/bin/macdeployqt")
-set(__QT_DEPLOY_IMPL_DIR "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/.qt")
+set(__QT_DEPLOY_IMPL_DIR "/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug/.qt")
 set(__QT_DEPLOY_VERBOSE "")
 set(__QT_CMAKE_EXPORT_NAMESPACE "Qt6")
 set(__QT_DEPLOY_GENERATOR_IS_MULTI_CONFIG "0")
@@ -58,7 +58,7 @@ set(__QT_DEPLOY_QT_DEBUG_POSTFIX "")
 
 # Define the CMake commands to be made available during deployment.
 set(__qt_deploy_support_files
-    "/Users/chooble/Documents/Qt-Study/CLion-QtQuick-QML-Template/cmake-build-debug/.qt/QtDeployTargets.cmake"
+    "/Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug/.qt/QtDeployTargets.cmake"
     "/Users/chooble/Documents/Qt/6.7.2/macos/lib/cmake/Qt6Core/Qt6CoreDeploySupport.cmake"
     "/Users/chooble/Documents/Qt/6.7.2/macos/lib/cmake/Qt6Qml/Qt6QmlDeploySupport.cmake"
 )
