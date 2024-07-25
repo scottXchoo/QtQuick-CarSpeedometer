@@ -11,3 +11,10 @@ void Indicator::leftIndicatorSlot() {
 	qDebug() << "Indicator: Left indicator slot called. Is " << (isOn ? "ON" : "OFF");
   }
 }
+
+void Indicator::rightIndicatorSlot() {
+  if (car_) {
+	bool isOn = car_->is_right_indicator_on();
+	qDebug() << "Indicator: Right indicator slot called. Is " << (isOn ? "ON" : "OFF");
+  }
+}

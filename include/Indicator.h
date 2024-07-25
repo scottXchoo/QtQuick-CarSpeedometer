@@ -16,7 +16,7 @@ class Indicator : public QObject {
 
  public slots:
   void leftIndicatorSlot();
-  // void rightIndicatorSlot();
+  void rightIndicatorSlot();
 
  private:
   QPointer<Car> car_;

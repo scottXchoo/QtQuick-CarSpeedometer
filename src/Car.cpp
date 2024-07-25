@@ -11,6 +11,7 @@ Car::Car() : current_speed_(0) {
   connect(this, &Car::accSignal, engine, &Engine::accSlot);
   connect(this, &Car::decSignal, engine, &Engine::decSlot);
   connect(this, &Car::leftIndicatorSignal, indicator, &Indicator::leftIndicatorSlot);
+  connect(this, &Car::rightIndicatorSignal, indicator, &Indicator::rightIndicatorSlot);
 
   qDebug() << "Car: Created";
 }
@@ -52,4 +53,16 @@ void Car::handleLeftIndicatorSlot() {
   is_left_indicator_on_ = !is_left_indicator_on_;
   emit leftIndicatorSignal();
   emit leftIndicatorChangeSignal(is_left_indicator_on_);
+}
+
+bool Car::is_right_indicator_on() const {
+  qDebug() << "Car: Getting right indicator status: " << is_right_indicator_on_;
+  return is_right_indicator_on_;
+}
+
+void Car::handleRightIndicatorSlot() {
+  qDebug() << "Car: Right indicator slot called";
+  is_right_indicator_on_ = !is_right_indicator_on_;
+  emit rightIndicatorSignal();
+  emit rightIndicatorChangeSignal(is_right_indicator_on_);
 }

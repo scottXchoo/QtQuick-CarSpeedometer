@@ -90,9 +90,39 @@ ApplicationWindow {
             }
 
             SequentialAnimation on opacity {
-                id: blinkAnimation
+                id: leftIndicatorBlinkAnimation
                 loops: Animation.Infinite
                 running: car.isLeftIndicatorOn
+                PropertyAnimation {
+                    to: 1; duration: 50
+                }
+                PauseAnimation {
+                    duration: 700
+                }
+                PropertyAnimation {
+                    to: 0; duration: 50
+                }
+            }
+        }
+
+        // Right Indicator
+        Rectangle {
+            id: rightIndicator
+            width: 50
+            height: 20
+            color: "yellow"
+            opacity: car.isRightIndicatorOn ? 1 : 0 // visible : car.isLeftIndicatorOn 가능
+            anchors {
+                right: parent.right
+                rightMargin: 20
+                top: parent.top
+                topMargin: 20
+            }
+
+            SequentialAnimation on opacity {
+                id: rightIndicatorBlinkAnimation
+                loops: Animation.Infinite
+                running: car.isRightIndicatorOn
                 PropertyAnimation {
                     to: 1; duration: 50
                 }
@@ -155,9 +185,9 @@ ApplicationWindow {
         Rectangle {
             anchors.top: parent.verticalCenter
             anchors.topMargin: 110
-            anchors.right: parent.horizontalCenter
-            anchors.rightMargin: 90
-            width: 60
+            anchors.left: parent.horizontalCenter
+            anchors.leftMargin: -180
+            width: 80
             height: 60
             color: "#1DB954"
             radius: 20
@@ -172,6 +202,30 @@ ApplicationWindow {
             MouseArea {
                 anchors.fill: parent
                 onClicked: car.handleLeftIndicatorSlot()
+            }
+        }
+
+        // Right Indicator 버튼
+        Rectangle {
+            anchors.top: parent.verticalCenter
+            anchors.topMargin: 110
+            anchors.right: parent.horizontalCenter
+            anchors.rightMargin: -180
+            width: 80
+            height: 60
+            color: "#1DB954"
+            radius: 20
+
+            Text {
+                anchors.centerIn: parent
+                text: "RIGHT"
+                font.pointSize: 18
+                color: "#FFFFFF"
+            }
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: car.handleRightIndicatorSlot()
             }
         }
     }
