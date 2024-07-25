@@ -8,6 +8,8 @@ Car::Car() : current_speed_(0) {
   engine = new Engine(this);
   indicator = new Indicator(this);
 
+  // QueuedConnection: signal과 slot이 서로 다른 스레드에서 실행될 때, 유용함 (vs DirectConnection)
+  // 하지만, 기본값으로 다른 스레드에 있으면 알아서 QueuedConnection으로 동작함
   connect(this, &Car::accSignal, engine, &Engine::accSlot);
   connect(this, &Car::decSignal, engine, &Engine::decSlot);
   connect(this, &Car::leftIndicatorSignal, indicator, &Indicator::leftIndicatorSlot);
