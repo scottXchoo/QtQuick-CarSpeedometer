@@ -8,5 +8,6 @@ constexpr int ACCELERATION = 10;
 constexpr int DECELERATION = 10;
 
 constexpr int TIMER_INTERVAL = 50;
+constexpr int INDICATOR_INTERVAL = 750;
 
 #endif //CONSTANTS_H_

@@ -81,7 +81,7 @@ ApplicationWindow {
             width: 50
             height: 20
             color: "yellow"
-            opacity: 0
+            opacity: car.isLeftIndicatorOn ? 1 : 0 // visible : car.isLeftIndicatorOn 가능
             anchors {
                 left: parent.left
                 leftMargin: 20
@@ -92,7 +92,7 @@ ApplicationWindow {
             SequentialAnimation on opacity {
                 id: blinkAnimation
                 loops: Animation.Infinite
-                running: true // car.isLeftIndicatorOn
+                running: car.isLeftIndicatorOn
                 PropertyAnimation {
                     to: 1; duration: 50
                 }

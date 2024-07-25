@@ -15,6 +15,7 @@ Engine::Engine(Car *car)
 
 Engine::~Engine() {
   if (timer_->isActive()) timer_->stop();
+  delete timer_;
 }
 
 void Engine::accSlot() {
