@@ -19,12 +19,16 @@ ApplicationWindow {
 
         // 키 이벤트 처리
         focus: true
+        property bool isUpKeyPressed: false
+        property bool isDownKeyPressed: false
 
         Keys.onPressed: (event) => {
-            if (event.key === Qt.Key_Up) {
+            if (event.key === Qt.Key_Up && !isUpKeyPressed) {
+                isUpKeyPressed = true;
                 car.handleAccPressedSlot()
-            } else if (event.key === Qt.Key_Down) {
-                car.handleDecSlot()
+            } else if (event.key === Qt.Key_Down && !isDownKeyPressed) {
+                isDownKeyPressed = true;
+                car.handleBrakePressedSlot()
             } else if (event.key === Qt.Key_Left) {
                 car.handleLeftIndicatorSlot()
             } else if (event.key === Qt.Key_Right) {
@@ -34,7 +38,11 @@ ApplicationWindow {
 
         Keys.onReleased: (event) => {
             if (event.key === Qt.Key_Up) {
+                isUpKeyPressed = false;
                 car.handleAccReleasedSlot()
+            } else if (event.key === Qt.Key_Down) {
+                isDownKeyPressed = false;
+                car.handleBrakePressedSlot()
             }
         }
 
