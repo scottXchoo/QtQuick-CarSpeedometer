@@ -78,8 +78,9 @@ ApplicationWindow {
         // Left Indicator
         Rectangle {
             id: leftIndicator
-            width: 50
-            height: 20
+            width: 20
+            height: 440
+            radius: 20
             color: "yellow"
             opacity: car.isLeftIndicatorOn ? 1 : 0 // visible : car.isLeftIndicatorOn 가능
             anchors {
@@ -108,8 +109,9 @@ ApplicationWindow {
         // Right Indicator
         Rectangle {
             id: rightIndicator
-            width: 50
-            height: 20
+            width: 20
+            height: 440
+            radius: 20
             color: "yellow"
             opacity: car.isRightIndicatorOn ? 1 : 0 // visible : car.isLeftIndicatorOn 가능
             anchors {
