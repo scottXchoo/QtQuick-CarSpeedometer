@@ -47,6 +47,10 @@ bool Car::is_left_indicator_on() const {
 
 void Car::handleLeftIndicatorSlot() {
   is_left_indicator_on_ = !is_left_indicator_on_;
+  if (is_right_indicator_on_) {
+	is_right_indicator_on_ = false;
+	emit rightIndicatorChangeSignal(is_right_indicator_on_);
+  }
   emit leftIndicatorSignal();
   emit leftIndicatorChangeSignal(is_left_indicator_on_);
 }
@@ -57,6 +61,10 @@ bool Car::is_right_indicator_on() const {
 
 void Car::handleRightIndicatorSlot() {
   is_right_indicator_on_ = !is_right_indicator_on_;
+  if (is_left_indicator_on_) {
+	is_left_indicator_on_ = false;
+	emit leftIndicatorChangeSignal(is_left_indicator_on_);
+  }
   emit rightIndicatorSignal();
   emit rightIndicatorChangeSignal(is_right_indicator_on_);
 }
