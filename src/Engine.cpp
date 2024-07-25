@@ -52,6 +52,11 @@ void Engine::accPressedSlot() {
 	dec_timer_->stop();
   }
 
+  if (is_breaking_) {
+	is_breaking_ = false;
+	brake_timer_->stop();
+  }
+
   current_acceleration_ = INIT_ACCELERATION;
   time_elapsed_ = 0;
   acc_timer_->start(TIMER_INTERVAL);
@@ -92,7 +97,7 @@ void Engine::brakeReleasedSlot() {
 	is_breaking_ = false;
 	brake_timer_->stop();
   }
-  
+
   is_decelerating_ = true;
   dec_timer_->start(TIMER_INTERVAL);
 }
