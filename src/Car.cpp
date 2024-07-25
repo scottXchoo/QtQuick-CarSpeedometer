@@ -21,14 +21,12 @@ Car::~Car() {
   delete indicator;
 }
 
-int Car::get_current_speed() const {
-  qDebug() << "Car: Getting current speed: " << current_speed_;
+double Car::get_current_speed() const {
   return current_speed_;
 }
 
-void Car::set_current_speed(int speed) {
+void Car::set_current_speed(double speed) {
   if (current_speed_ == speed) return;
-  qDebug() << "Car: Setting current speed to " << speed;
   current_speed_ = speed;
   emit speedChangeSignal(current_speed_);
 }
@@ -44,7 +42,6 @@ void Car::handleDecSlot() {
 }
 
 bool Car::is_left_indicator_on() const {
-  qDebug() << "Car: Getting left indicator status: " << is_left_indicator_on_;
   return is_left_indicator_on_;
 }
 
@@ -56,7 +53,6 @@ void Car::handleLeftIndicatorSlot() {
 }
 
 bool Car::is_right_indicator_on() const {
-  qDebug() << "Car: Getting right indicator status: " << is_right_indicator_on_;
   return is_right_indicator_on_;
 }
 

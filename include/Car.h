@@ -8,7 +8,7 @@ class Indicator;
 
 class Car : public QObject {
  Q_OBJECT
-  Q_PROPERTY(int currentSpeed READ get_current_speed WRITE set_current_speed NOTIFY speedChangeSignal)
+  Q_PROPERTY(double currentSpeed READ get_current_speed WRITE set_current_speed NOTIFY speedChangeSignal)
   Q_PROPERTY(bool isLeftIndicatorOn READ is_left_indicator_on NOTIFY leftIndicatorChangeSignal)
   Q_PROPERTY(bool isRightIndicatorOn READ is_right_indicator_on NOTIFY rightIndicatorChangeSignal)
 
@@ -16,8 +16,8 @@ class Car : public QObject {
   explicit Car();
   ~Car() override;
 
-  [[nodiscard]] int get_current_speed() const;
-  void set_current_speed(int speed);
+  [[nodiscard]] double get_current_speed() const;
+  void set_current_speed(double speed);
 
   [[nodiscard]] bool is_left_indicator_on() const;
   [[nodiscard]] bool is_right_indicator_on() const;
@@ -31,7 +31,7 @@ class Car : public QObject {
  signals:
   void accSignal();
   void decSignal();
-  void speedChangeSignal(int speed);
+  void speedChangeSignal(double speed);
 
   void leftIndicatorSignal();
   void leftIndicatorChangeSignal(bool isOn);
@@ -40,7 +40,7 @@ class Car : public QObject {
   void rightIndicatorChangeSignal(bool isOn);
 
  private:
-  int current_speed_ = 0;
+  double current_speed_ = 0;
   bool is_left_indicator_on_ = false;
   bool is_right_indicator_on_ = false;
 

@@ -61,7 +61,7 @@ ApplicationWindow {
         Text {
             anchors.centerIn: parent
             anchors.verticalCenterOffset: -60
-            text: car.currentSpeed
+            text: car.currentSpeed.toFixed(1)
             font.pointSize: 120
             color: "#FFFFFF"
         }
