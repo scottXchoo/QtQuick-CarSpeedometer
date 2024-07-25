@@ -27,5 +27,3 @@ This project demonstrates the implementation of a basic car speedometer using **
 - Press the 'ACCELERATE' button or press the up arrow key to increase speed
 - Press the 'BRAKE' button or press the down arrow key to decrease speed
 - Use the indicator buttons to toggle left and right indicators
-
-<img width="635" alt="image" src="https://github.com/user-attachments/assets/eec49999-dd94-4457-8eee-4224250c4dc4">
