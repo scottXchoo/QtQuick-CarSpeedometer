@@ -110,13 +110,18 @@ ApplicationWindow {
                 loops: Animation.Infinite
                 running: car.isLeftIndicatorOn
                 PropertyAnimation {
-                    to: 1; duration: 50
+                    to: 1
+                    duration: 0
                 }
                 PauseAnimation {
-                    duration: 700
+                    duration: 1000
                 }
                 PropertyAnimation {
-                    to: 0; duration: 50
+                    to: 0
+                    duration: 100
+                }
+                PauseAnimation {
+                    duration: 300
                 }
             }
         }
@@ -141,13 +146,18 @@ ApplicationWindow {
                 loops: Animation.Infinite
                 running: car.isRightIndicatorOn
                 PropertyAnimation {
-                    to: 1; duration: 50
+                    to: 1
+                    duration: 0
                 }
                 PauseAnimation {
-                    duration: 700
+                    duration: 1000
                 }
                 PropertyAnimation {
-                    to: 0; duration: 50
+                    to: 0
+                    duration: 100
+                }
+                PauseAnimation {
+                    duration: 300
                 }
             }
         }
