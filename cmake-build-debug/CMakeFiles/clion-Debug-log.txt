@@ -9,5 +9,5 @@ CMake Deprecation Warning:
 
 
 -- Configuring done (0.9s)
--- Generating done (0.1s)
+-- Generating done (0.0s)
 -- Build files have been written to: /Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug

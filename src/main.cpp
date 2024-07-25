@@ -2,7 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 
-#include "../include/Car.h"
+#include "Car.h"
 
 int main(int argc, char *argv[]) {
   QGuiApplication app(argc, argv);

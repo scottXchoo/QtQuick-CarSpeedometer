@@ -1,7 +1,9 @@
 #ifndef INDICATOR_H_
 #define INDICATOR_H_
 
-class Indicator {
+#include <QObject>
+
+class Indicator : public QObject {
 
 };
 

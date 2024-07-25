@@ -13,17 +13,19 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
 # 소스 파일 추가
 add_executable(Tesla_Speedometer
 	src/main.cpp
 	qml.qrc
 	src/Car.cpp
 	include/Car.h
-	src/Speedometer.cpp
 	src/Engine.cpp
 	include/Engine.h
 	src/Indicator.cpp
 	include/Indicator.h
+	include/constants.h
 )
 
 # Qt 라이브러리 링크

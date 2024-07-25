@@ -18,9 +18,11 @@ class Car : public QObject {
 
  public slots:
   void accSlot();
+  void decSlot();
 
  signals:
   void accSignal();
+  void decSignal();
   void speedChangeSignal(int speed);
 
  private:

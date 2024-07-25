@@ -1,5 +1,5 @@
-#include "../include/Car.h"
-#include "../include/Engine.h"
+#include "Car.h"
+#include "Engine.h"
 
 #include <QDebug>
 
@@ -7,6 +7,7 @@ Car::Car() : current_speed_(0) {
   engine = new Engine(this);
 
   connect(this, &Car::accSignal, engine, &Engine::accSlot);
+  connect(this, &Car::decSignal, engine, &Engine::decSlot);
 
   qDebug() << "Car: Created";
 }
@@ -30,4 +31,9 @@ void Car::set_current_speed(int speed) {
 void Car::accSlot() {
   qDebug() << "Car: accSlot called";
   emit accSignal();
+}
+
+void Car::decSlot() {
+  qDebug() << "Car: decSlot called";
+  emit decSignal();
 }

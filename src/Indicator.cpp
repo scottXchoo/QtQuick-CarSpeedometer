@@ -1,1 +1,1 @@
-#include "../include/Indicator.h"
+#include "Indicator.h"

@@ -16,14 +16,15 @@ class Engine : public QObject {
 
  public slots:
   void accSlot();
+  void decSlot();
+  void updateSpeed();
 
  private:
   QPointer<Car> car_;
   QTimer *timer_;
-  int target_speed_;
+  int max_speed_;
+  int min_speed_;
   int current_acceleration_;
-
-  void updateSpeed();
 };
 
 #endif //ENGINE_H_
