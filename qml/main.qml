@@ -17,6 +17,21 @@ ApplicationWindow {
         anchors.fill: parent
         color: "#000000"
 
+        // 키 이벤트 처리
+        focus: true
+
+        Keys.onPressed: (event) => {
+            if (event.key === Qt.Key_Up) {
+                car.handleAccSlot()
+            } else if (event.key === Qt.Key_Down) {
+                car.handleDecSlot()
+            } else if (event.key === Qt.Key_Left) {
+                car.handleLeftIndicatorSlot()
+            } else if (event.key === Qt.Key_Right) {
+                car.handleRightIndicatorSlot()
+            }
+        }
+
         // 속도 표시 배경
         Shape {
             anchors.centerIn: parent
