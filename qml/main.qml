@@ -89,7 +89,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: car.accSlot()
+                onClicked: car.handleAccSlot()
             }
         }
 
@@ -111,7 +111,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: car.decSlot()
+                onClicked: car.handleDecSlot()
             }
         }
     }

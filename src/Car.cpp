@@ -28,12 +28,12 @@ void Car::set_current_speed(int speed) {
   emit speedChangeSignal(current_speed_);
 }
 
-void Car::accSlot() {
+void Car::handleAccSlot() {
   qDebug() << "Car: accSlot called";
   emit accSignal();
 }
 
-void Car::decSlot() {
+void Car::handleDecSlot() {
   qDebug() << "Car: decSlot called";
   emit decSignal();
 }

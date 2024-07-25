@@ -17,8 +17,8 @@ class Car : public QObject {
   void set_current_speed(int speed);
 
  public slots:
-  void accSlot();
-  void decSlot();
+  void handleAccSlot();
+  void handleDecSlot();
 
  signals:
   void accSignal();
