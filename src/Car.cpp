@@ -12,6 +12,8 @@ Car::Car() : current_speed_(0) {
   // 하지만, 기본값으로 다른 스레드에 있으면 알아서 QueuedConnection으로 동작함
   connect(this, &Car::accPressedSignal, engine, &Engine::accPressedSlot);
   connect(this, &Car::accReleasedSignal, engine, &Engine::accReleasedSlot);
+  connect(this, &Car::brakePressedSignal, engine, &Engine::brakePressedSlot);
+  connect(this, &Car::brakeReleasedSignal, engine, &Engine::brakeReleasedSlot);
 
   // connect(this, &Car::decSignal, engine, &Engine::decSlot);
   connect(this, &Car::leftIndicatorSignal, indicator, &Indicator::leftIndicatorSlot);
@@ -39,6 +41,14 @@ void Car::handleAccPressedSlot() {
 
 void Car::handleAccReleasedSlot() {
   emit accReleasedSignal();
+}
+
+void Car::handleBrakePressedSlot() {
+  emit brakePressedSignal();
+}
+
+void Car::handleBrakeReleasedSlot() {
+  emit brakeReleasedSignal();
 }
 
 bool Car::is_left_indicator_on() const {

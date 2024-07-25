@@ -192,7 +192,7 @@ ApplicationWindow {
             }
         }
 
-        // DECEL 버튼
+        // BRAKE 버튼
         Rectangle {
             anchors.top: parent.verticalCenter
             anchors.topMargin: 150
@@ -204,15 +204,15 @@ ApplicationWindow {
 
             Text {
                 anchors.centerIn: parent
-                text: "DECELERATE"
+                text: "BRAKE"
                 font.pointSize: 18
                 color: "#FFFFFF"
             }
 
             MouseArea {
                 anchors.fill: parent
-                onPressed: car.handleAccPressedSlot()
-                onReleased: car.handleAccReleasedSlot()
+                onPressed: car.handleBrakePressedSlot()
+                onReleased: car.handleBrakeReleasedSlot()
             }
         }
 

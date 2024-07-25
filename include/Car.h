@@ -25,6 +25,8 @@ class Car : public QObject {
  public slots:
   void handleAccPressedSlot();
   void handleAccReleasedSlot();
+  void handleBrakePressedSlot();
+  void handleBrakeReleasedSlot();
 
   void handleLeftIndicatorSlot();
   void handleRightIndicatorSlot();
@@ -32,13 +34,12 @@ class Car : public QObject {
  signals:
   void accPressedSignal();
   void accReleasedSignal();
-
-  void decSignal();
+  void brakePressedSignal();
+  void brakeReleasedSignal();
   void speedChangeSignal(double speed);
 
   void leftIndicatorSignal();
   void leftIndicatorChangeSignal(bool isOn);
-
   void rightIndicatorSignal();
   void rightIndicatorChangeSignal(bool isOn);
 

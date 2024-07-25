@@ -4,11 +4,14 @@
 constexpr int MAX_SPEED = 200;
 constexpr int MIN_SPEED = 0;
 constexpr int INIT_ACCELERATION = 0;
-constexpr double ACCELERATION = 3.7;
-constexpr int TIMER_INTERVAL = 50;
+constexpr double ACCELERATION = 4.3;
+constexpr int TIMER_INTERVAL = 100;
+constexpr int BRAKE_ACCELERATION = 5;
 
-const double INPUT_LAYER_SIZE = 3.2;
-double sigmoid(double x) {
-  return INPUT_LAYER_SIZE / (1.0 + exp(-x));
+constexpr double SIGMA = 1;
+constexpr double BRAKE_SIGMA = 3;
+
+double sigmoid(double x, double k) {
+  return k / (1.0 + exp(-x));
 }
 #endif //CONSTANTS_H_
