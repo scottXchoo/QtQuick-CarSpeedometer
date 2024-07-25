@@ -7,7 +7,7 @@ constexpr int INIT_ACCELERATION = 0;
 constexpr double ACCELERATION = 3.7;
 constexpr int TIMER_INTERVAL = 50;
 
-const double INPUT_LAYER_SIZE = 1.3;
+const double INPUT_LAYER_SIZE = 3.2;
 double sigmoid(double x) {
   return INPUT_LAYER_SIZE / (1.0 + exp(-x));
 }

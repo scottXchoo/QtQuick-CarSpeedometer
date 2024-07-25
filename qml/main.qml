@@ -22,13 +22,19 @@ ApplicationWindow {
 
         Keys.onPressed: (event) => {
             if (event.key === Qt.Key_Up) {
-                car.handleAccSlot()
+                car.handleAccPressedSlot()
             } else if (event.key === Qt.Key_Down) {
                 car.handleDecSlot()
             } else if (event.key === Qt.Key_Left) {
                 car.handleLeftIndicatorSlot()
             } else if (event.key === Qt.Key_Right) {
                 car.handleRightIndicatorSlot()
+            }
+        }
+
+        Keys.onReleased: (event) => {
+            if (event.key === Qt.Key_Up) {
+                car.handleAccReleasedSlot()
             }
         }
 
@@ -76,7 +82,7 @@ ApplicationWindow {
         Text {
             anchors.centerIn: parent
             anchors.verticalCenterOffset: -60
-            text: car.currentSpeed.toFixed(1)
+            text: car.currentSpeed.toFixed(0)
             font.pointSize: 120
             color: "#FFFFFF"
         }
