@@ -4,7 +4,7 @@
 constexpr int MAX_SPEED = 200;
 constexpr int MIN_SPEED = 0;
 constexpr int INIT_ACCELERATION = 0;
-constexpr double ACCELERATION = 4.3;
+constexpr double ACCELERATION = 5.3;
 constexpr int TIMER_INTERVAL = 100;
 constexpr int BRAKE_ACCELERATION = 5;
 

@@ -92,6 +92,9 @@ void Engine::brakeReleasedSlot() {
 	is_breaking_ = false;
 	brake_timer_->stop();
   }
+  
+  is_decelerating_ = true;
+  dec_timer_->start(TIMER_INTERVAL);
 }
 
 void Engine::updateBrakeSpeed() {
