@@ -171,7 +171,8 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: car.handleAccSlot()
+                onPressed: car.handleAccPressedSlot()
+                onReleased: car.handleAccReleasedSlot()
             }
         }
 
@@ -194,7 +195,8 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: car.handleDecSlot()
+                onPressed: car.handleAccPressedSlot()
+                onReleased: car.handleAccReleasedSlot()
             }
         }
 

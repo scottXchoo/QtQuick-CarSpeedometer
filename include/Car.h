@@ -23,13 +23,16 @@ class Car : public QObject {
   [[nodiscard]] bool is_right_indicator_on() const;
 
  public slots:
-  void handleAccSlot();
-  void handleDecSlot();
+  void handleAccPressedSlot();
+  void handleAccReleasedSlot();
+
   void handleLeftIndicatorSlot();
   void handleRightIndicatorSlot();
 
  signals:
-  void accSignal();
+  void accPressedSignal();
+  void accReleasedSignal();
+
   void decSignal();
   void speedChangeSignal(double speed);
 
