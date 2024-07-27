@@ -11,7 +11,35 @@ ApplicationWindow {
     Rectangle {
         anchors.fill: parent
         color: "#000000"
+
+        // 키 이벤트 처리
         focus: true
+        property bool isUpKeyPressed: false
+        property bool isDownKeyPressed: false
+
+        Keys.onPressed: (event) => {
+            if (event.key === Qt.Key_Up && !isUpKeyPressed) {
+                isUpKeyPressed = true;
+                carModel.handleAccPressed()
+            } else if (event.key === Qt.Key_Down && !isDownKeyPressed) {
+                isDownKeyPressed = true;
+                carModel.handleBrakePressed()
+            } else if (event.key === Qt.Key_Left) {
+                carModel.handleLeftIndicator()
+            } else if (event.key === Qt.Key_Right) {
+                carModel.handleRightIndicator()
+            }
+        }
+
+        Keys.onReleased: (event) => {
+            if (event.key === Qt.Key_Up) {
+                isUpKeyPressed = false;
+                carModel.handleAccReleased()
+            } else if (event.key === Qt.Key_Down) {
+                isDownKeyPressed = false;
+                carModel.handleBrakeReleased()
+            }
+        }
 
         // 속도 표시 배경
         Shape {
