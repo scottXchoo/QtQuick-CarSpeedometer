@@ -1,20 +1,22 @@
-#include <QDebug>
-
-#include "Car.h"
 #include "Indicator.h"
+#include "CarModel.h"
 
-Indicator::Indicator(Car *car) : car_(car) {}
+Indicator::Indicator(CarModel *carModel) : carModel_(carModel) {}
 
-void Indicator::leftIndicatorSlot() {
-  if (car_) {
-	bool isOn = car_->is_left_indicator_on();
-	qDebug() << "Indicator: Left indicator slot called. Is " << (isOn ? "ON" : "OFF");
+void Indicator::toggleLeftIndicator() {
+  bool newState = !carModel_->leftIndicatorOn();
+  emit leftIndicatorChanged(newState);
+
+  if (carModel_->rightIndicatorOn()) {
+	emit rightIndicatorChanged(false);
   }
 }
 
-void Indicator::rightIndicatorSlot() {
-  if (car_) {
-	bool isOn = car_->is_right_indicator_on();
-	qDebug() << "Indicator: Right indicator slot called. Is " << (isOn ? "ON" : "OFF");
+void Indicator::toggleRightIndicator() {
+  bool newState = !carModel_->rightIndicatorOn();
+  emit rightIndicatorChanged(newState);
+
+  if (carModel_->leftIndicatorOn()) {
+	emit leftIndicatorChanged(false);
   }
 }

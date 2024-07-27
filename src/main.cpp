@@ -1,19 +1,24 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
-
-#include "Car.h"
+#include "CarModel.h"
 
 int main(int argc, char *argv[]) {
   QGuiApplication app(argc, argv);
 
   QQmlApplicationEngine engine;
-  Car car;
 
-  engine.rootContext()->setContextProperty("car", &car);
-  engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
+  CarModel carModel;
+  engine.rootContext()->setContextProperty("carModel", &carModel);
 
-  if (engine.rootObjects().isEmpty()) return -1;
+  const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
+  QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
+				   &app, [url](QObject *obj, const QUrl &objUrl) {
+		if (!obj && url == objUrl)
+		  QCoreApplication::exit(-1);
+	  }, Qt::QueuedConnection);
 
-  return QCoreApplication::exec();
+  engine.load(url);
+
+  return QGuiApplication::exec();
 }

@@ -1,25 +1,26 @@
-#ifndef INDICATOR_H_
-#define INDICATOR_H_
+#ifndef INDICATOR_H
+#define INDICATOR_H
 
 #include <QObject>
-#include <QPointer>
-#include <QTimer>
 
-class Car; // Forward declaration
+class CarModel;
 
 class Indicator : public QObject {
  Q_OBJECT
 
  public:
-  explicit Indicator(Car *car);
-  ~Indicator() override = default;
+  explicit Indicator(CarModel *carModel);
+
+ signals:
+  void leftIndicatorChanged(bool on);
+  void rightIndicatorChanged(bool on);
 
  public slots:
-  void leftIndicatorSlot();
-  void rightIndicatorSlot();
+  void toggleLeftIndicator();
+  void toggleRightIndicator();
 
  private:
-  QPointer<Car> car_;
+  CarModel *carModel_;
 };
 
-#endif //INDICATOR_H_
+#endif // INDICATOR_H

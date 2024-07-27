@@ -19,13 +19,13 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 add_executable(Tesla_Speedometer
 	src/main.cpp
 	qml.qrc
-	src/Car.cpp
-	include/Car.h
 	src/Engine.cpp
 	include/Engine.h
 	src/Indicator.cpp
 	include/Indicator.h
 	include/constants.h
+	src/CarModel.cpp
+	include/CarModel.h
 )
 
 # Qt 라이브러리 링크

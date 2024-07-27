@@ -1,50 +1,17 @@
-import QtQuick
-import QtQuick.Controls
+import QtQuick 2.15
+import QtQuick.Controls 2.15
 import QtQuick.Shapes
-import QtQuick.Controls.Material
 
 ApplicationWindow {
     visible: true
     width: 640
     height: 480
-    color: "white"
     title: "Tesla Model S"
-
-    Material.theme: Material.Dark
-    Material.accent: Material.Green
 
     Rectangle {
         anchors.fill: parent
         color: "#000000"
-
-        // 키 이벤트 처리
         focus: true
-        property bool isUpKeyPressed: false
-        property bool isDownKeyPressed: false
-
-        Keys.onPressed: (event) => {
-            if (event.key === Qt.Key_Up && !isUpKeyPressed) {
-                isUpKeyPressed = true;
-                car.handleAccPressedSlot()
-            } else if (event.key === Qt.Key_Down && !isDownKeyPressed) {
-                isDownKeyPressed = true;
-                car.handleBrakePressedSlot()
-            } else if (event.key === Qt.Key_Left) {
-                car.handleLeftIndicatorSlot()
-            } else if (event.key === Qt.Key_Right) {
-                car.handleRightIndicatorSlot()
-            }
-        }
-
-        Keys.onReleased: (event) => {
-            if (event.key === Qt.Key_Up) {
-                isUpKeyPressed = false;
-                car.handleAccReleasedSlot()
-            } else if (event.key === Qt.Key_Down) {
-                isDownKeyPressed = false;
-                car.handleBrakePressedSlot()
-            }
-        }
 
         // 속도 표시 배경
         Shape {
@@ -81,7 +48,7 @@ ApplicationWindow {
                     centerX: 200; centerY: 200
                     radiusX: 200; radiusY: 200
                     startAngle: -180
-                    sweepAngle: car.currentSpeed / 200 * 180
+                    sweepAngle: carModel.currentSpeed / 200 * 180
                 }
             }
         }
@@ -90,7 +57,7 @@ ApplicationWindow {
         Text {
             anchors.centerIn: parent
             anchors.verticalCenterOffset: -60
-            text: car.currentSpeed.toFixed(0)
+            text: carModel.currentSpeed.toFixed(0)
             font.pointSize: 120
             color: "#FFFFFF"
         }
@@ -111,7 +78,7 @@ ApplicationWindow {
             height: 440
             radius: 20
             color: "yellow"
-            opacity: car.isLeftIndicatorOn ? 1 : 0 // visible : car.isLeftIndicatorOn 가능
+            opacity: carModel.leftIndicatorOn ? 1 : 0
             anchors {
                 left: parent.left
                 leftMargin: 20
@@ -122,7 +89,7 @@ ApplicationWindow {
             SequentialAnimation on opacity {
                 id: leftIndicatorBlinkAnimation
                 loops: Animation.Infinite
-                running: car.isLeftIndicatorOn
+                running: carModel.leftIndicatorOn
                 PropertyAnimation {
                     to: 1
                     duration: 0
@@ -147,7 +114,7 @@ ApplicationWindow {
             height: 440
             radius: 20
             color: "yellow"
-            opacity: car.isRightIndicatorOn ? 1 : 0 // visible : car.isLeftIndicatorOn 가능
+            opacity: carModel.rightIndicatorOn ? 1 : 0
             anchors {
                 right: parent.right
                 rightMargin: 20
@@ -158,7 +125,7 @@ ApplicationWindow {
             SequentialAnimation on opacity {
                 id: rightIndicatorBlinkAnimation
                 loops: Animation.Infinite
-                running: car.isRightIndicatorOn
+                running: carModel.rightIndicatorOn
                 PropertyAnimation {
                     to: 1
                     duration: 0
@@ -195,8 +162,8 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onPressed: car.handleAccPressedSlot()
-                onReleased: car.handleAccReleasedSlot()
+                onPressed: carModel.handleAccPressed()
+                onReleased: carModel.handleAccReleased()
             }
         }
 
@@ -219,8 +186,8 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onPressed: car.handleBrakePressedSlot()
-                onReleased: car.handleBrakeReleasedSlot()
+                onPressed: carModel.handleBrakePressed()
+                onReleased: carModel.handleBrakeReleased()
             }
         }
 
@@ -244,7 +211,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: car.handleLeftIndicatorSlot()
+                onClicked: carModel.handleLeftIndicator()
             }
         }
 
@@ -268,7 +235,7 @@ ApplicationWindow {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: car.handleRightIndicatorSlot()
+                onClicked: carModel.handleRightIndicator()
             }
         }
     }

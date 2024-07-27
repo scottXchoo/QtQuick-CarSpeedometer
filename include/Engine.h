@@ -1,25 +1,26 @@
-#ifndef ENGINE_H_
-#define ENGINE_H_
+#ifndef ENGINE_H
+#define ENGINE_H
 
 #include <QObject>
 #include <QTimer>
-#include <QPointer>
-#include <QThread>
 
-class Car; // Forward declaration
+class CarModel;
 
 class Engine : public QObject {
  Q_OBJECT
 
  public:
-  explicit Engine(Car *car);
-  ~Engine() override;
+  Engine(CarModel *carModel);
+  ~Engine();
+
+ signals:
+  void speedChanged(double speed);
 
  public slots:
-  void accPressedSlot();
-  void accReleasedSlot();
-  void brakePressedSlot();
-  void brakeReleasedSlot();
+  void accPressed();
+  void accReleased();
+  void brakePressed();
+  void brakeReleased();
 
  private slots:
   void updateAccSpeed();
@@ -27,17 +28,14 @@ class Engine : public QObject {
   void updateBrakeSpeed();
 
  private:
-  QPointer<Car> car_;
+  CarModel *carModel_;
   QTimer *acc_timer_;
   QTimer *dec_timer_;
   QTimer *brake_timer_;
-  QThread *engine_thread_;
-  int max_speed_;
-  int min_speed_;
   double current_acceleration_;
   double time_elapsed_;
   bool is_decelerating_;
   bool is_breaking_;
 };
 
-#endif //ENGINE_H_
+#endif // ENGINE_H
