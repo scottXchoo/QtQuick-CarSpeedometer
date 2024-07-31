@@ -8,6 +8,13 @@ CMake Deprecation Warning:
   use the cmake-file-api(7) to view CMake-generated project build trees.
 
 
--- Configuring done (0.2s)
--- Generating done (0.0s)
+---------------------------- RibbonUI ----------------------------
+Build RibbonUI APP: ON
+Build RibbonUI static library: OFF
+Build QWindowKit: ON
+Universal build RibbonUI for macOS: ON
+RibbonUI QML Plugin Path: /Users/chooble/Documents/Qt/6.7.2/macos/qml/RibbonUI
+------------------------------------------------------------------
+-- Configuring done (1.3s)
+-- Generating done (0.4s)
 -- Build files have been written to: /Users/chooble/Documents/Tesla-Speedometer/cmake-build-debug

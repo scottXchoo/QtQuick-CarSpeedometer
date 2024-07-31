@@ -2,5 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/RibbonUI" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/RibbonUI/3rdparty/Qt5QMLPlugin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/RibbonUI/3rdparty/qwindowkit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/RibbonUI/3rdparty/qwindowkit/qmsetup" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/RibbonUI/3rdparty/qwindowkit/qmsetup/src/syscmdline" vcs="Git" />
   </component>
 </project>
